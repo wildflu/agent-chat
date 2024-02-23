@@ -37,6 +37,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: ^4.6.6
   dialog_flowtter: ^0.3.3
+  chat_bubbles: ^1.6.0
+  typewritertext: ^2.3.1
+  flutter_svg: ^2.0.9
+  gap: ^3.0.1
 
 dev_dependencies:
   flutter_test:
@@ -63,6 +67,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/agant-chat-byuh-4635c14e299b.json
+    - assets/empty_list.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
