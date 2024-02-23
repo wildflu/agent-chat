@@ -1,15 +1,18 @@
 
 
 
+import 'dart:async';
+
 import 'package:chatagent/model/message.dart';
 import 'package:dialog_flowtter/dialog_flowtter.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ChatController extends GetxController {
+
   TextEditingController messageController = TextEditingController();
-  List<Amessage> convertation = [
-  ];
+  List<Amessage> convertation = [];
 
   DialogAuthCredentials ?credentials;
   DialogFlowtter ?instance;
@@ -27,7 +30,10 @@ class ChatController extends GetxController {
     convertation.add(Amessage(text: textResponse!, isQuestion: false));
     update();
   }
-
+  startNewChat() {
+    convertation.clear();
+    update();
+  }
   @override
   void onInit() async{
     super.onInit();
@@ -35,4 +41,3 @@ class ChatController extends GetxController {
     instance = DialogFlowtter(credentials: credentials!, sessionId: '1');
   }
 }
-
